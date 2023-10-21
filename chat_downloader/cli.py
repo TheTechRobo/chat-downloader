@@ -164,6 +164,8 @@ def main(cli_args=None):
                                help='Print various debugging information. This is equivalent to setting logging to debug. Defaults to False')
     debug_options.add_argument('--quiet', '-q', action='store_true',
                                help='Activate quiet mode (hide all output), defaults to False')
+    debug_options.add_argument('--no-print-messages', action='store_true',
+                               help='Don\'t print messages to stdout, defaults to False')
 
     # INIT PARAMS
     init_group = parser.add_argument_group('Initialisation Arguments')

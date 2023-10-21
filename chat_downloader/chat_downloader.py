@@ -350,7 +350,7 @@ def run(propagate_interrupt=False, **kwargs):
     try:
         chat = downloader.get_chat(**chat_params)
 
-        if kwargs.get('quiet'):  # Only check if quiet once
+        if kwargs.get('quiet') or kwargs.get('no_print_messages'):  # Only check if quiet once
             def callback(item):
                 pass
         else:
